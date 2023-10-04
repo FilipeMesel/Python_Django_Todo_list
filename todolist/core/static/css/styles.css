@@ -1,0 +1,101 @@
+/* Reset de estilos padrão do navegador */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Azul claro de fundo */
+    color: #333; /* Cor do texto principal */
+    text-align: center;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #0077b6; /* Azul mais escuro para o cabeçalho */
+    color: #fff; /* Texto branco para o cabeçalho */
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Estilo da lista de navegação (navbar) */
+ul {
+    background-color: #0077b6; /* Azul mais escuro para a navbar */
+    padding: 10px;
+    display: flex; /* Exibe os itens lado a lado */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+}
+
+ul li {
+    margin-right: 20px; /* Espaçamento entre os itens da navbar */
+}
+
+ul li:last-child {
+    margin-right: 0; /* Remove o espaçamento do último item */
+}
+
+ul li a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: #fff; /* Texto branco para os links da navbar */
+    font-weight: bold;
+    transition: color 0.3s; /* Suave transição de cor ao passar o mouse */
+}
+
+ul li a:hover {
+    color: #0077b6; /* Cor de fundo ao passar o mouse */
+    background: white;
+}
+
+/* Estilo do formulário */
+form {
+    background-color: #fff; /* Fundo branco para o formulário */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #0077b6; /* Azul mais escuro para o botão */
+    color: #fff; /* Texto branco para o botão */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Suave transição de cor ao passar o mouse */
+}
+
+form button:hover {
+    background-color: #005691; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo dos "todos" */
+div {
+    background-color: #fff; /* Fundo branco para os "todos" */
+    padding: 20px;
+    border-radius: 10px; /* Borda levemente arredondada */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;
+}
+
+/* Estilo dos botões dentro dos "todos" */
+form button {
+    margin-right: 10px; /* Espaçamento entre os botões "Concluir" e "Excluir" */
+}

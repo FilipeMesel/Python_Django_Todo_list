@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>List Todos</title>
+    </head>
+    <body>
+        <main>
+            <header><h1>Lista de Todos</h1></header>
+            <ul>
+                <li><a href="{% url 'list_todos' %}">Lista de Todos</a></li>
+                <li><a href="{% url 'register_todos' %}">Cadastro de Todos</a></li>
+            </ul>
+            <div>
+                {% for todo in todos %}
+                <div>
+                    <p>ID: {{ todo.id }}</p>
+                    <p>Descrição: {{ todo.description }}</p>
+                    <p>Status: {{ todo.status }}</p>
+                    <form method="post" action="{% url 'atualizar_status_todo' todo.id %}">
+                        {% csrf_token %}
+                        <button type="submit">Concluir</button>
+                    </form>
+                    <form method="post" action="{% url 'excluir_todo' todo.id %}">
+                        {% csrf_token %}
+                        <button type="submit">Excluir</button>
+                    </form>
+                </div>
+                <hr>
+                {% endfor %}
+            </div>
+            <footer><h1>Todos os direitos reservados</h1></footer>
+        </main>
+        
+    </body>
+</html>
